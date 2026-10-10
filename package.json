@@ -1,0 +1,11 @@
+{
+  "name": "priorix-ticket-management",
+  "version": "1.0.0",
+  "description": "PRIORIX intelligent support ticket management system",
+  "scripts": {
+    "start": "npx serve . -s -p 3000",
+    "serve": "python3 -m http.server 3000"
+  },
+  "keywords": ["ticket-management", "priorix"],
+  "license": "MIT"
+}

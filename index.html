@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>Ticket Management</title>
+    <meta name="description" content="PRIORIX is an intelligent support ticket management system featuring automated priority scoring, AI troubleshooting, SLA tracking, role-based workflows, and analytics." />
+    <meta name="keywords" content="" />
+    <meta itemprop="image" content="" />
+    <meta property="og:title" content="Ticket Management" />
+    <meta property="og:description" content="PRIORIX is an intelligent support ticket management system featuring automated priority scoring, AI troubleshooting, SLA tracking, role-based workflows, and analytics." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://app-ezvw5disyha9.appmedo.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ticket Management" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ticket Management" />
+    <meta name="twitter:description" content="PRIORIX is an intelligent support ticket management system featuring automated priority scoring, AI troubleshooting, SLA tracking, role-based workflows, and analytics." />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="https://app-ezvw5disyha9.appmedo.com" />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" crossorigin src="./assets/index-BDXEjzmG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DocXIvER.css">
+    <script>
+              (function () {
+                const redirect = new URLSearchParams(location.search).get('redirect');
+                if (redirect && redirect !== location.pathname) {
+                  history.replaceState(null, '', redirect);
+                }
+              })();
+            </script>
+    <link rel="stylesheet" id="fonts-code" href="./assets/fonts-code.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script id="md-click">
+              window.mdClick = e => {
+                const target = e.target;
+                const {href, target: linkTarget} = target.dataset;
+                const appType = 'web';
+                const isBlank = linkTarget === '_blank';
+
+                if (!href) return;
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                // 外部链接或新窗口打开
+                if (isBlank || href.startsWith('http')) {
+                  let finalHref = href;
+                  if (appType === 'miniapp' && !href.startsWith('http')) {
+                    finalHref = window.location.href.split('#')[0] + '#/' + href;
+                  }
+                  window.open(finalHref, linkTarget || '_self');
+                  return;
+                }
+
+                // 内部路由跳转
+                const finalHref = href.startsWith('/') ? href : '/' + href;
+                if (appType === 'miniapp') {
+                  window.location.hash = finalHref;
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                } else {
+                  window.history.pushState({}, '', finalHref);
+                  window.dispatchEvent(new Event('popstate'));
+                }
+              };
+              document.addEventListener('click', window.mdClick, true);
+            </script>
+    <script id="iframe-onerror-catcher">
+              const observer = new PerformanceObserver((list) => {
+                list.getEntries().forEach((entry) => {
+                  if (entry.initiatorType === 'script' && entry.responseStatus >= 400) {
+                    window.parent.postMessage({
+                      type: "RESOURCE_LOAD_ERROR",
+                      name: entry.name,
+                      status: entry.responseStatus
+                    }, "*");
+                    console.warn('[iframe-error] Resource failed:', entry.name, entry.responseStatus);
+                  }
+                });
+              });
+              observer.observe({ type: 'resource', buffered: true });
+            </script>
+  <script>
+  (function () {
+    const script = document.createElement('script');
+    script.src = 'https://miaoda-resource-static.s3cdn.medo.dev/runtime-inject/domain-static/online/1.0.89.1/static/miaoda-external.js?tm=' + new Date().getTime();
+    script.async = true;
+    script.onload = function () {
+      window.miaoda.init({
+        appId: 'app-ezvw5disyha9',
+        type: 'WEB',
+        share: {
+            title: "Ticket Management",
+            desc: "PRIORIX is an intelligent support ticket management system featuring automated priority scoring, AI troubleshooting, SLA tracking, role-based workflows, and analytics.",
+            image: ""
+        }
+      });
+    };
+    document.head.appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
